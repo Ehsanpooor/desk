@@ -1,0 +1,124 @@
+/* Root rules use [data-elva-app] (only the app root has it). Component rules use
+   [data-elva-scope], which the desk also puts on the title bar slot and the
+   overlay root, so toolbars and modals are styled too. Tokens only, no reset. */
+[data-elva-app='hello'] {
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  color: var(--ink-0);
+  background: var(--page);
+  font-family: var(--font-sans);
+  font-size: calc(14px * var(--font-scale));
+}
+[data-elva-scope='hello'] .hello {
+  display: grid;
+  gap: 16px;
+  padding: 22px 26px 32px;
+  max-width: 960px;
+}
+[data-elva-scope='hello'] h1 {
+  margin: 0;
+  font-size: 22px;
+  letter-spacing: -0.02em;
+}
+[data-elva-scope='hello'] .grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+@container elva-window (min-width: 640px) {
+  [data-elva-scope='hello'] .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+[data-elva-scope='hello'] .card {
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-1);
+  padding: 14px 16px;
+}
+[data-elva-scope='hello'] .card h2 {
+  margin: 0 0 8px;
+  font-size: 13px;
+  color: var(--ink-3);
+  font-weight: 500;
+}
+[data-elva-scope='hello'] dl {
+  margin: 0;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 4px 12px;
+  font-size: 13px;
+}
+[data-elva-scope='hello'] dt {
+  color: var(--ink-3);
+}
+[data-elva-scope='hello'] dd {
+  margin: 0;
+  color: var(--ink-0);
+  font-variant-numeric: tabular-nums;
+  overflow-wrap: anywhere;
+}
+[data-elva-scope='hello'] .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+[data-elva-scope='hello'] button,
+[data-elva-scope='hello'] .tb button {
+  height: 32px;
+  padding: 0 12px;
+  border: 0;
+  border-radius: var(--radius-md);
+  background: var(--accent);
+  color: var(--ink-on-accent);
+  font: 500 13px var(--font-sans);
+  cursor: default;
+}
+[data-elva-scope='hello'] button.secondary {
+  background: var(--surface-mute);
+  color: var(--ink-0);
+}
+[data-elva-scope='hello'] button:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+[data-elva-scope='hello'] .tb button {
+  height: 26px;
+  padding: 0 10px;
+  font-size: 12px;
+}
+[data-elva-scope='hello'] .modal-backdrop {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: var(--overlay);
+}
+[data-elva-scope='hello'] .modal {
+  width: min(380px, 90%);
+  background: var(--surface-raised);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-3);
+  padding: 20px;
+  color: var(--ink-0);
+}
+[data-elva-scope='hello'] .pill {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  background: var(--accent-soft);
+  color: var(--accent-ink);
+}
+[data-elva-scope='hello'] textarea {
+  width: 100%;
+  min-height: 60px;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  color: var(--ink-0);
+  font: inherit;
+  padding: 8px;
+}

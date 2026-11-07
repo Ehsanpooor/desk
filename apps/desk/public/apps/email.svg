@@ -1,0 +1,21 @@
+<svg viewBox="20.37 17.32 71.53 71.53" fill="none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <filter id="bgS" x="0" y="0" width="113" height="113" filterUnits="userSpaceOnUse"><feDropShadow dx="0" dy="3.06" stdDeviation="10.19" flood-color="#4143B6" flood-opacity="0.2"/></filter>
+  <filter id="backS" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="-3.58" dy="3.58" stdDeviation="3.58" flood-color="#8A2AB0" flood-opacity="0.29"/></filter>
+  <filter id="glassS" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="-3.58" dy="3.58" stdDeviation="3.58" flood-color="#8A2AB0" flood-opacity="0.22"/></filter>
+  <filter id="glyphS" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="-0.36" dy="0.36" stdDeviation="0.36" flood-color="#8A2AB0" flood-opacity="0.35"/></filter>
+  <linearGradient id="fill" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#E58AF0"/><stop offset="1" stop-color="#A63FCB"/></linearGradient>
+  <g id="shape"><rect x="29" y="32" width="44" height="31" rx="5"/></g>
+  <mask id="hMask" maskUnits="userSpaceOnUse"><use href="#shape" fill="white"/></mask>
+  <clipPath id="glassClip"><rect x="50.4" y="45.8" width="30.4" height="30.4" rx="3.2"/></clipPath>
+  <mask id="gMask" maskUnits="userSpaceOnUse"><rect x="50.4" y="45.8" width="30.4" height="30.4" rx="3.2" fill="white"/></mask>
+</defs>
+<rect x="20.37" y="17.32" width="71.53" height="71.53" rx="14.31" fill="#FBEFFD"/>
+<g filter="url(#backS)"><use href="#shape" fill="url(#fill)"/></g>
+<path d="M32 36l19 13.5L70 36" stroke="white" stroke-opacity="0.6" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<g mask="url(#hMask)"><polygon points="20,17 92,17 20,89" fill="white" fill-opacity="0.1"/></g>
+<g filter="url(#glassS)"><g clip-path="url(#glassClip)"><rect x="47.4" y="42.8" width="36.4" height="36.4" fill="#F6DDFB" fill-opacity="0.32"/></g></g>
+<g mask="url(#gMask)"><polygon points="50.4,45.8 80.8,45.8 50.4,76.19999999999999" fill="white" fill-opacity="0.12"/></g>
+<rect x="50.8" y="46.199999999999996" width="29.599999999999998" height="29.599999999999998" rx="2.9" stroke="white" stroke-opacity="0.45" stroke-width="0.8"/>
+<g filter="url(#glyphS)" fill="white" stroke-linecap="round" stroke-linejoin="round"><path d="M73.6 68.0v-2.5a6.5 6.5 0 0 0-6.5-6.5H57.599999999999994" stroke="white" stroke-width="2.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M62.099999999999994 54.5l-4.5 4.5 4.5 4.5" stroke="white" stroke-width="2.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+</svg>

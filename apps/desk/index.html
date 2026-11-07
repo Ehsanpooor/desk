@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en" data-theme="elva" data-mode="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>ELVA Desk</title>
+    <script>
+      // No-flash theme boot. Reads the saved preference (or the platform
+      // cookie written by another ELVA app) and sets the attributes before
+      // any stylesheet loads. Kept in sync with src/theme/store.ts.
+      // Order: the person's choice here, the platform cookie, then light.
+      (function () {
+        var theme = 'elva';
+        var mode = '';
+        try {
+          var saved = JSON.parse(localStorage.getItem('elva:desk:appearance') || 'null');
+          if (saved && saved.mode) {
+            mode = saved.mode;
+            if (saved.theme) theme = saved.theme;
+          }
+        } catch (e) {}
+        if (!mode) {
+          var m = document.cookie.match(/(?:^|; )elva_theme=([^.;]+)\.(light|dark|system)/);
+          if (m) {
+            theme = m[1];
+            mode = m[2];
+          }
+        }
+        if (!mode) mode = 'light';
+        var resolved =
+          mode === 'system'
+            ? window.matchMedia('(prefers-color-scheme: dark)').matches
+              ? 'dark'
+              : 'light'
+            : mode;
+        var root = document.documentElement;
+        root.setAttribute('data-theme', theme);
+        root.setAttribute('data-mode', resolved);
+        root.style.colorScheme = resolved;
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

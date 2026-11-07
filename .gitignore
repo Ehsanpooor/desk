@@ -1,0 +1,12 @@
+node_modules
+dist
+.vite
+*.log
+.env
+.env.*
+!.env.example
+.vercel
+.DS_Store
+
+# Local Claude Code settings
+.claude/settings.local.json
